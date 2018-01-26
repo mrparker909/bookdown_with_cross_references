@@ -1,0 +1,13 @@
+
+# Second Chapter: Tables
+
+```{r TableChunk}
+table_stuff <- matrix(rnorm(n=10, 1,1), byrow = TRUE, nrow=2, dimnames = list(row=LETTERS[1:2],col=letters[1:5]))
+
+knitr::kable(table_stuff, caption = "Grand Old Table")
+```
+
+
+This is a reference for Figure \ref{fig:ThisIsAFigureChunk}. It links to the figure in chapter 1.
+
+And here is a reference to the chapter 2 table: Table \ref{tab:TableChunk}.

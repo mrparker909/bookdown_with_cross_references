@@ -1,0 +1,21 @@
+# First Chapter: Figures
+
+By default, bookdown merges all Rmd files by the order of filenames, e.g., 01-intro.Rmd will appear before 02-literature.Rmd. Filenames that start with an underscore _ are skipped. If there exists an Rmd file named index.Rmd, it will always be treated as the first file when merging all Rmd files.
+
+
+```{r ThisIsAFigureChunk, fig.cap="A caption like this one is necessary for the figure to be referenceable!", warning=FALSE, error=FALSE, message=FALSE}
+
+invisible(library(ggplot2))
+ggplot(data=diamonds) + geom_density(aes(colour=cut,x=price)) +facet_grid(cut~.)
+```
+
+
+This is a pdf/latex only reference for Figure \ref{fig:ThisIsAFigureChunk}. It links to the figure in chapter 1.
+
+This is a "bookdown" reference for Figure \@ref(fig:ThisIsAFigureChunk). It should work for any bookdown format that supports references.
+
+
+And here is a reference to the chapter 2 table: Table \ref{tab:TableChunk}.
+And the "bookdown" reference: Table \@ref(tab:TableChunk).
+
+Bye.

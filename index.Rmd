@@ -1,0 +1,14 @@
+---
+# to build the book run this in the console:
+# bookdown::render_book(input = "index.Rmd", output_format = "bookdown::pdf_book")
+
+title: "A Bookdown Book With References"
+author: "Matthew Parker"
+
+site: bookdown::bookdown_site
+documentclass: book
+
+output:
+  bookdown::pdf_book: default
+---
+
